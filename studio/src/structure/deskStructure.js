@@ -1,17 +1,20 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { MdSettings } from "react-icons/md";
+
 import {
-  MdPerson,
+  MdSettings,
   MdDescription,
+  MdHome,
+  MdGroup,
+  MdHelp,
+  MdPerson,
   MdLocalOffer
-} from "react-icons/md"
+} from 'react-icons/md'
 import IframePreview from '../previews/IframePreview'
 
 // Web preview configuration
 const remoteURL = 'https://akb-site.netlify.app'
 const localURL = 'http://localhost:8000'
-const previewURL =
-  window.location.hostname === 'localhost' ? localURL : remoteURL
+const previewURL = window.location.hostname === 'localhost' ? localURL : remoteURL
 
 export const getDefaultDocumentNode = props => {
   /**
@@ -58,27 +61,19 @@ export default () =>
         ),
       S.divider(),
       S.listItem()
-        .title('Blog posts')
-        .icon(MdDescription)
-        .schemaType('post')
-        .child(S.documentTypeList('post').title('Blog posts')),
-      S.listItem()
-        .title('Authors')
-        .icon(MdPerson)
-        .schemaType('author')
-        .child(S.documentTypeList('author').title('Authors')),
-      S.listItem()
-        .title('Categories')
-        .icon(MdLocalOffer)
-        .schemaType('category')
-        .child(S.documentTypeList('category').title('Categories')),
+        .title('Home Page')
+        .icon(MdHome)
+        .child(
+          S.editor()
+            .id('homePage')
+            .title('Home Page')
+            .schemaType('homePage')
+            .documentId('homePage')
+        ),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
-        listItem =>
-          !['category', 'author', 'post', 'siteSettings'].includes(
-            listItem.getId()
-          )
+        listItem => !['homePage', 'siteSettings'].includes(listItem.getId())
       )
     ])

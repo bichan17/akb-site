@@ -19,7 +19,7 @@ export default {
                 },
                 {
                   buildHookId: '5fa98a4ec77f4fef5d73b2d0',
-                  title: 'Blog Website',
+                  title: 'Andreas Website',
                   name: 'akb-site',
                   apiId: '0bde6984-4ca2-469c-9fce-a8b3239c3d11'
                 }
