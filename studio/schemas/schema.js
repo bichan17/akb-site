@@ -10,7 +10,6 @@ import homePage from './documents/homePage'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
-import bioPortableText from './objects/bioPortableText'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import textSlide from './objects/textSlide'
@@ -30,7 +29,6 @@ export default createSchema({
     homePage,
     mainImage,
     bodyPortableText,
-    bioPortableText,
     excerptPortableText,
     textSlide,
     twoColumnSlide,
