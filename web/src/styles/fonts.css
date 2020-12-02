@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Agrandir Grand";
+  src: url("../fonts/agrandir/Agrandir-GrandLight.eot");
+  src: url("../fonts/agrandir/Agrandir-GrandLight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/agrandir/Agrandir-GrandLight.woff2") format("woff2"),
+    url("../fonts/agrandir/Agrandir-GrandLight.woff") format("woff"),
+    url("../fonts/agrandir/Agrandir-GrandLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir Grand";
+  src: url("../fonts/agrandir/Agrandir-GrandHeavy.eot");
+  src: url("../fonts/agrandir/Agrandir-GrandHeavy.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/agrandir/Agrandir-GrandHeavy.woff2") format("woff2"),
+    url("../fonts/agrandir/Agrandir-GrandHeavy.woff") format("woff"),
+    url("../fonts/agrandir/Agrandir-GrandHeavy.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir";
+  src: url("../fonts/agrandir/Agrandir-ThinItalic.eot");
+  src: url("../fonts/agrandir/Agrandir-ThinItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/agrandir/Agrandir-ThinItalic.woff2") format("woff2"),
+    url("../fonts/agrandir/Agrandir-ThinItalic.woff") format("woff"),
+    url("../fonts/agrandir/Agrandir-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir Narrow";
+  src: url("../fonts/agrandir/Agrandir-Narrow.eot");
+  src: url("../fonts/agrandir/Agrandir-Narrow.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/agrandir/Agrandir-Narrow.woff2") format("woff2"),
+    url("../fonts/agrandir/Agrandir-Narrow.woff") format("woff"),
+    url("../fonts/agrandir/Agrandir-Narrow.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir";
+  src: url("../fonts/agrandir/Agrandir-TextBold.eot");
+  src: url("../fonts/agrandir/Agrandir-TextBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/agrandir/Agrandir-TextBold.woff2") format("woff2"),
+    url("../fonts/agrandir/Agrandir-TextBold.woff") format("woff"),
+    url("../fonts/agrandir/Agrandir-TextBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir";
+  src: url("../fonts/agrandir/Agrandir-Regular.eot");
+  src: url("../fonts/agrandir/Agrandir-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/agrandir/Agrandir-Regular.woff2") format("woff2"),
+    url("../fonts/agrandir/Agrandir-Regular.woff") format("woff"),
+    url("../fonts/agrandir/Agrandir-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir Tight";
+  src: url("../fonts/agrandir/Agrandir-Tight.eot");
+  src: url("../fonts/agrandir/Agrandir-Tight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/agrandir/Agrandir-Tight.woff2") format("woff2"),
+    url("../fonts/agrandir/Agrandir-Tight.woff") format("woff"),
+    url("../fonts/agrandir/Agrandir-Tight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir Wide";
+  src: url("../fonts/agrandir/Agrandir-WideLight.eot");
+  src: url("../fonts/agrandir/Agrandir-WideLight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/agrandir/Agrandir-WideLight.woff2") format("woff2"),
+    url("../fonts/agrandir/Agrandir-WideLight.woff") format("woff"),
+    url("../fonts/agrandir/Agrandir-WideLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir Wide";
+  src: url("../fonts/agrandir/Agrandir-WideBlackItalic.eot");
+  src: url("../fonts/agrandir/Agrandir-WideBlackItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/agrandir/Agrandir-WideBlackItalic.woff2") format("woff2"),
+    url("../fonts/agrandir/Agrandir-WideBlackItalic.woff") format("woff"),
+    url("../fonts/agrandir/Agrandir-WideBlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hatton";
+  src: url("../fonts/hatton/Hatton-Semibold.eot");
+  src: url("../fonts/hatton/Hatton-Semibold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/hatton/Hatton-Semibold.woff2") format("woff2"),
+    url("../fonts/hatton/Hatton-Semibold.woff") format("woff"),
+    url("../fonts/hatton/Hatton-Semibold.ttf") format("truetype"),
+    url("../fonts/hatton/Hatton-Semibold.svg#Hatton-Semibold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hatton";
+  src: url("../fonts/hatton/Hatton-Medium.eot");
+  src: url("../fonts/hatton/Hatton-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/hatton/Hatton-Medium.woff2") format("woff2"),
+    url("../fonts/hatton/Hatton-Medium.woff") format("woff"),
+    url("../fonts/hatton/Hatton-Medium.ttf") format("truetype"),
+    url("../fonts/hatton/Hatton-Medium.svg#Hatton-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hatton";
+  src: url("../fonts/hatton/Hatton-Ultralight.eot");
+  src: url("../fonts/hatton/Hatton-Ultralight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/hatton/Hatton-Ultralight.woff2") format("woff2"),
+    url("../fonts/hatton/Hatton-Ultralight.woff") format("woff"),
+    url("../fonts/hatton/Hatton-Ultralight.ttf") format("truetype"),
+    url("../fonts/hatton/Hatton-Ultralight.svg#Hatton-Ultralight") format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
