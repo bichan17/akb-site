@@ -4,9 +4,8 @@ import { StaticQuery, graphql } from "gatsby";
 export default ({ children }) => (
   <StaticQuery
     query={query}
-    render={({ site, homepage }) => {
-      console.log(site);
-      return children({ site, homepage });
+    render={({ site, homePage }) => {
+      return children({ site, homePage });
     }}
   />
 );
@@ -15,28 +14,13 @@ const query = graphql`
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
-      keywords
     }
-    homepage: allSanityPost(
-      limit: 6
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
-      edges {
-        node {
-          id
-          publishedAt
-          mainImage {
-            ...SanityImage
-            alt
-          }
-          title
-          _rawExcerpt
-          slug {
-            current
-          }
-        }
-      }
+    homePage: sanityHomePage {
+      _rawIntroCopy(resolveReferences: { maxDepth: 10 })
+      _rawClientsSlides(resolveReferences: { maxDepth: 10 })
+      _rawServicesSlides(resolveReferences: { maxDepth: 10 })
+      _rawWorkHeadline(resolveReferences: { maxDepth: 10 })
+      _rawWorkSegments(resolveReferences: { maxDepth: 10 })
     }
   }
 `;

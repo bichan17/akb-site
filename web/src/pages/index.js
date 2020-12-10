@@ -17,11 +17,11 @@ const IndexPage = (props) => {
   }
   return (
     <QHomePage>
-      {({ site, homepage }) => {
+      {({ site, homePage }) => {
         return (
           <Layout>
             <SEO title={site.title} description={site.description} keywords={site.keywords} />
-            <HomePage {...homepage} />
+            <HomePage {...homePage} />
           </Layout>
         );
       }}
