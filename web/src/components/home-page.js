@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "./container";
 import WorkSegment from "./work-segment";
 import PageSection from "./page-section";
 import Slide from "./slide";
@@ -14,13 +13,12 @@ const HomePage = (props) => {
     _rawWorkHeadline,
     _rawWorkSegments,
   } = props;
-  console.log(_rawWorkHeadline, _rawWorkSegments);
 
   return (
-    <Container>
+    <main>
       <PageSection anchor="intro">
         <Slide>
-          <TextSegment blocks={_rawIntroCopy} />
+          <TextSegment blocks={_rawIntroCopy} variant={TextSegment.variants.narrow} />
         </Slide>
       </PageSection>
 
@@ -48,7 +46,7 @@ const HomePage = (props) => {
           <WorkSegment headline={_rawWorkHeadline} segments={_rawWorkSegments} />
         </Slide>
       </PageSection>
-    </Container>
+    </main>
   );
 };
 

@@ -1,2 +1,13 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
 .root {
+  @media (--media-min-small) {
+    text-align: center;
+  }
+}
+
+.narrow {
+  max-width: 104rem;
+  margin: 0 auto;
 }

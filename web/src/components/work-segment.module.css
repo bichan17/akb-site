@@ -1,2 +1,12 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
 .root {
+}
+
+.headline {
+  margin-bottom: 6rem;
+  @media (--media-min-small) {
+    text-align: center;
+  }
 }

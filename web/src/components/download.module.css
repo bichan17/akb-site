@@ -1,2 +1,36 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
 .root {
+  margin-bottom: 6rem;
+  @media (--media-min-small) {
+    display: flex;
+    margin-bottom: 5rem;
+  }
+}
+
+.inverted {
+  @media (--media-min-small) {
+    flex-direction: row-reverse;
+  }
+  & .image {
+    @media (--media-min-small) {
+      margin-right: 0;
+      margin-left: 5rem;
+    }
+  }
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+  @media (--media-min-small) {
+    margin-bottom: 0;
+    margin-right: 5rem;
+  }
+}
+
+.text {
+  /* margin-bottom: 6rem; */
 }

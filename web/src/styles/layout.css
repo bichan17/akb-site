@@ -1,9 +1,9 @@
 @import "./custom-properties.css";
+@import "./custom-media.css";
 
 html {
   font-family: var(--font-family-hatton);
-  font-size: var(--font-base-size);
-  line-height: var(--font-base-line-height);
+  font-size: 62.5%;
 }
 
 body {
@@ -11,6 +11,12 @@ body {
   background: var(--color-white);
   color: var(--color-black);
   margin: 0;
+  font-size: var(--font-base-size);
+  line-height: var(--font-base-line-height);
+  @media (--media-min-small) {
+    font-size: var(--font-base-size-desktop);
+    line-height: var(--font-base-line-height-desktop);
+  }
 }
 
 html,

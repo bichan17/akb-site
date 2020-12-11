@@ -1,0 +1,8 @@
+@import "../styles/custom-properties.css";
+
+:root {
+  --width-limit: {
+    max-width: var(--layout-width-limit);
+    margin: 0 auto;
+  }
+}
