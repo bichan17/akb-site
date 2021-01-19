@@ -11,7 +11,7 @@ import { large } from "./typography.module.css";
 const TextSegment = (props) => {
   const { blocks, variant } = props;
 
-  console.log(variant);
+  // console.log(variant);
 
   return (
     <Container>
