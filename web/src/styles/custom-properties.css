@@ -10,6 +10,10 @@
   --color-very-light-gray: #e7ebed;
   --color-white: #fff;
   --color-accent: #156dff;
+  --color-baby-blue: #605fef;
+  --color-sun-yellow: #faff01;
+
+  --underline-distance: 1em;
 
   /* Typography */
   --font-base-size: 1.8rem;

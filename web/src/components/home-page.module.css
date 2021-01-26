@@ -1,0 +1,16 @@
+.slidesBackground {
+  position: relative;
+  z-index: 1; /* matters! */
+  overflow: hidden;
+}
+.slidesBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #fffff4 2%, #faff00, #dfff9a, #6dffdc, #936dff, #ff6d87);
+  transition: transform 0.4s;
+  z-index: -1;
+}

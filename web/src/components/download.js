@@ -17,7 +17,7 @@ const Download = (props) => {
       <ConditionalWrapper
         condition={download}
         wrapper={(children) => (
-          <a href={download.asset.url} target="_blank">
+          <a className={styles.downloadLink} href={download.asset.url} target="_blank">
             {children}
           </a>
         )}

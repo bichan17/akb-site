@@ -1,0 +1,23 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+@import "../styles/effects.css";
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  & h1 {
+    margin-bottom: 4rem;
+  }
+}
+.contactLinks {
+  text-align: center;
+  & a {
+    color: var(--color-sun-yellow);
+    @apply --solid-underline-yellow;
+  }
+}
+.contactLinks {
+  margin-bottom: 6.3rem;
+}

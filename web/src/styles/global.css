@@ -1,5 +1,6 @@
 @import "./custom-media.css";
 @import "./custom-properties.css";
+@import "./effects.css";
 
 * {
   box-sizing: border-box;
@@ -31,6 +32,8 @@ img {
 }
 a {
   text-decoration: none;
+  color: var(--color-baby-blue);
+  @apply --solid-underline-blue;
 }
 
 ul,
