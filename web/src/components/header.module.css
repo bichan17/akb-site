@@ -1,20 +1,22 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
+@import "../styles/width-limit.css";
+@import "../styles/effects.css";
 
 .root {
   position: fixed;
   z-index: 100;
+  width: 100%;
 }
 
 .wrapper {
+  @apply --width-limit;
   box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 960px;
   padding: 1em;
   display: flex;
 
   @media (--media-min-small) {
-    padding: 1.5em 1.5em;
+    padding: 5.5rem 5rem;
   }
 }
 
@@ -24,9 +26,11 @@
 
   @nest & a {
     display: inline-block;
-    padding: 0.5em;
+    /* padding: 0.5em; */
     color: inherit;
     text-decoration: none;
+    background-image: none;
+    text-transform: uppercase;
 
     @media (hover: hover) {
       @nest &:hover {
@@ -59,23 +63,6 @@
 .nav {
   display: none;
 
-  @nest & ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  @nest & ul li a {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-  }
-
-  @media (hover: hover) {
-    @nest & ul li a:hover {
-      color: var(--color-accent);
-    }
-  }
-
   @media (--media-max-small) {
     position: absolute;
     background: var(--color-white);
@@ -84,27 +71,52 @@
     left: 0;
     right: 0;
     top: 4.3rem;
-
-    @nest & ul {
-      padding: 1rem 0;
-    }
-
-    @nest & ul li a {
-      padding: 0.5rem 1.5rem;
-    }
   }
 
   @media (--media-min-small) {
     display: block;
+  }
 
-    @nest & ul {
+  @nest & ul {
+    margin: 0;
+    padding: 1rem 0;
+    @media (--media-min-small) {
+      padding: 0;
       list-style: none;
       display: flex;
       justify-content: flex-end;
     }
+  }
 
-    @nest & ul li a {
-      padding: 0.5rem;
+  @nest & ul li a {
+    font-family: var(--font-family-agrandir);
+    font-size: 3.2rem;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: none;
+    padding: 0.5rem 1.5rem;
+
+    @media (--media-min-small) {
+      padding-right: 5rem;
+      font-size: 2.3rem;
+    }
+    &.linkActive {
+      text-decoration: underline;
+    }
+  }
+  @nest & ul li:last-child {
+    & a {
+      @media (--media-min-small) {
+        padding-right: 0;
+      }
+    }
+  }
+
+  @media (hover: hover) {
+    @nest & ul li a:hover {
+      color: var(--color-accent);
     }
   }
 }

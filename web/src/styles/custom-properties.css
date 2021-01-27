@@ -14,6 +14,7 @@
   --color-sun-yellow: #faff01;
 
   --underline-distance: 1em;
+  --layout-width-limit: 144rem;
 
   /* Typography */
   --font-base-size: 1.8rem;

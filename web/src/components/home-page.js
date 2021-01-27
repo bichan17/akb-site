@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import WorkSegment from "./work-segment";
 import PageSection from "./page-section";
 import TextSegment from "./text-segment";
@@ -8,6 +8,7 @@ import { FP_LICENSE } from "../lib/fullpage-license";
 import styles from "./home-page.module.css";
 import { cn } from "../lib/helpers";
 import ContactSegment from "./contact-segment";
+import { SectionContext } from "../lib/SectionContext";
 
 const HomePage = (props) => {
   const {
@@ -17,6 +18,17 @@ const HomePage = (props) => {
     _rawWorkHeadline,
     _rawWorkSegments,
   } = props;
+
+  const { currentSection, setCurrentSection } = useContext(SectionContext);
+
+  console.log(currentSection);
+
+  const handleSlideLeave = (origin, destination, direction) => {
+    if (destination.anchor) {
+      window.history.pushState({}, destination.anchor, `#${destination.anchor}`);
+      setCurrentSection(destination.anchor);
+    }
+  };
   return (
     <main>
       <ReactFullpage
@@ -24,6 +36,9 @@ const HomePage = (props) => {
         licenseKey={FP_LICENSE}
         scrollingSpeed={800} /* Options here */
         scrollOverflow={true}
+        onLeave={(origin, destination, direction) => {
+          handleSlideLeave(origin, destination, direction);
+        }}
         render={({ state, fullpageApi }) => {
           return (
             <div className={cn(styles.slidesBackground)}>
@@ -33,13 +48,13 @@ const HomePage = (props) => {
                 </PageSection>
 
                 {_rawClientsSlides.map((s, index) => (
-                  <PageSection key={s._key} anchor={index === 0 ? "clients" : null}>
+                  <PageSection key={s._key} anchor="clients">
                     <TextSegment blocks={s.textBlock} />
                   </PageSection>
                 ))}
 
                 {_rawServicesSlides.map((s, index) => (
-                  <PageSection key={s._key} anchor={index === 0 ? "services" : null}>
+                  <PageSection key={s._key} anchor="services">
                     {s._type == "textSlide" && <TextSegment blocks={s.textBlock} />}
                     {s._type == "twoColumnSlide" && (
                       <TwoColumnSegment leftBlock={s.leftTextBlock} rightBlock={s.rightTextBlock} />

@@ -1,6 +1,12 @@
 @import "./custom-properties.css";
 
 :root {
+  --solid-underline-black: {
+    background-image: linear-gradient(to right, var(--color-black) 100%, var(--color-black) 100%);
+    background-position: 0 var(--underline-distance);
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+  }
   --solid-underline-blue: {
     background-image: linear-gradient(
       to right,
