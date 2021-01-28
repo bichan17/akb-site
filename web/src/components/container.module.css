@@ -1,12 +1,16 @@
 @import "../styles/custom-media.css";
+@import "../styles/effects.css";
 
 .root {
   box-sizing: border-box;
   max-width: 125rem;
-  padding: 2rem;
-  margin: 0 auto;
+  padding: 4rem 2rem;
 
+  margin: 0 auto;
   @media (--media-min-small) {
+    padding: 4rem;
+  }
+  @media (--media-min-medium) {
     padding: 6rem;
   }
 }

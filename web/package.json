@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.18",
-    "gatsby-image": "^2.0.41"
+    "gatsby-image": "^2.0.41",
+    "react-icons": "^4.1.0"
   }
 }

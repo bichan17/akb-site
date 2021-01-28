@@ -15,7 +15,6 @@ button {
   cursor: pointer;
   font-size: inherit;
   padding: 0;
-  /* font-family: var(--font-family-capacity); */
 
   & svg {
     display: block;
@@ -41,4 +40,18 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.fp-section .fp-scrollable {
+  @apply --fade-in-mask-mobile;
+
+  @media (--media-min-small) {
+    @apply --fade-in-mask-desktop;
+  }
+}
+.fp-section .fp-scrollable .fp-scroller {
+  padding-top: 7rem;
+  @media (--media-min-small) {
+    padding-top: 13rem;
+  }
 }

@@ -11,8 +11,6 @@ import { large } from "./typography.module.css";
 const TextSegment = (props) => {
   const { blocks, variant } = props;
 
-  // console.log(variant);
-
   return (
     <Container>
       <div className={cn(styles.root, large, variant == variants.narrow ? styles.narrow : "")}>

@@ -21,8 +21,6 @@ const HomePage = (props) => {
 
   const { currentSection, setCurrentSection } = useContext(SectionContext);
 
-  console.log(currentSection);
-
   const handleSlideLeave = (origin, destination, direction) => {
     if (destination.anchor) {
       window.history.pushState({}, destination.anchor, `#${destination.anchor}`);
