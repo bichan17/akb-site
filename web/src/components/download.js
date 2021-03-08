@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { buildImageObj, cn } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
-
+import { AiOutlineDownload } from "react-icons/ai";
 import styles from "./download.module.css";
 import { bodyText } from "./typography.module.css";
 
@@ -19,12 +19,20 @@ const Download = (props) => {
         wrapper={(children) => (
           <a className={styles.downloadLink} href={download.asset.url} target="_blank">
             {children}
+            <div className={cn(styles.downloadCopy, bodyText)}>
+              Download <AiOutlineDownload />
+            </div>
           </a>
         )}
       >
-        <div className={styles.image}>
-          <img src={imageUrlFor(buildImageObj(image)).auto("format").url()} alt={image.alt} />
-        </div>
+        {image.asset && (
+          <div className={styles.image}>
+            <img
+              src={imageUrlFor(buildImageObj(image)).width(600).auto("format").quality(100).url()}
+              alt={image.alt}
+            />
+          </div>
+        )}
       </ConditionalWrapper>
       <div className={cn(styles.text, bodyText)}>
         <PortableText blocks={textBlock} />

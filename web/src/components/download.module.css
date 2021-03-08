@@ -14,10 +14,10 @@
   @media (--media-min-small) {
     flex-direction: row-reverse;
   }
-  & .image {
+  & .text {
     @media (--media-min-small) {
-      margin-right: 0;
-      margin-left: 5rem;
+      margin-left: 0;
+      margin-right: 5rem;
     }
   }
 }
@@ -28,13 +28,30 @@
   margin-bottom: 2.4rem;
   @media (--media-min-small) {
     margin-bottom: 0;
-    margin-right: 5rem;
+    /* margin-right: 5rem; */
+  }
+  & img {
+    width: 30rem;
   }
 }
 .downloadLink {
   background-image: none;
 }
+.downloadCopy {
+  text-align: center;
+  /* text-decoration: underline; */
+  color: var(--color-sun-yellow);
+  margin-top: 0.9rem;
+  & svg {
+    position: relative;
+    top: 0.3rem;
+  }
+}
 .text {
+  @media (--media-min-small) {
+    margin-left: 5rem;
+  }
+
   & a {
     display: inline-block;
     color: var(--color-sun-yellow);
